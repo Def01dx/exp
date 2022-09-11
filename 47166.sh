@@ -26,7 +26,7 @@ rootshell="/tmp/sh"
 lib="libsubuid.so"
 
 command_exists() {
-  command -v "${1}" >/dev/null 2>/dev/null
+  command -v "${1}" /dev/null 2/dev/null
 }
 
 if ! command_exists gcc; then
